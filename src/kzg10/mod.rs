@@ -24,6 +24,7 @@ pub use data_structures::*;
 /// [Kate, Zaverucha and Goldbgerg][kzg10]
 ///
 /// [kzg10]: http://cacr.uwaterloo.ca/techreports/2010/cacr2010-10.pdf
+#[derive(Clone)]
 pub struct KZG10<E: Pairing, P: DenseUVPolynomial<E::ScalarField>> {
     _engine: PhantomData<E>,
     _poly: PhantomData<P>,
